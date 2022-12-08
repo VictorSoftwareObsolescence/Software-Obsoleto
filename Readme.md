@@ -12,5 +12,5 @@ em grandes empresas no Brasil. Este trabalho apresenta conceitos de Software Obs
 
 **ANEXOS**
 
-- Anexo B - Respostas do questionário apresentado em 2018 - http://bit.ly/VictorOliveiraSO_2018
-- Anexo C - Respostas do questionário apresentado em 2022 - http://bit.ly/VictorOliveiraSO_2022
+- Anexo B - Respostas do questionário apresentado em 2018 - http://bit.ly/VictorOliveiraSO_2018(http://bit.ly/VictorOliveiraSO_2018)
+- Anexo C - Respostas do questionário apresentado em 2022 - http://bit.ly/VictorOliveiraSO_2022(http://bit.ly/VictorOliveiraSO_2022)
