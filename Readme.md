@@ -11,10 +11,13 @@ em grandes empresas no Brasil. Este trabalho apresenta conceitos de Software Obs
 2. Professor do Instituto de Ciências Exatas e Informática da PUC Minas, Brasil – josemarcaetano@pucminas.br
 
 **ANEXOS**
+
 Anexo B - Formulário
+
 Formulário utilizado na pesquisa em:\
 <https://github.com/VictorSoftwareObsolescence/Software-Obsoleto/blob/main/Formulario.pdf>
 
 Anexo C - Respostas do questionários 2018 e 2022
+
 Planilha com os resultados dos questionários em:\
 <https://github.com/VictorSoftwareObsolescence/Software-Obsoleto/tree/main/Planilhas>
