@@ -16,5 +16,5 @@ Formulário utilizado na pesquisa em:\
 <https://github.com/VictorSoftwareObsolescence/Software-Obsoleto/blob/main/Formulario.pdf>
 
 Anexo C - Respostas do questionários 2018 e 2022
-Planilha com o resultado do questionário disponível no Google Docs em:\
+Planilha com os resultados dos questionários em:\
 <https://github.com/VictorSoftwareObsolescence/Software-Obsoleto/tree/main/Planilhas>
