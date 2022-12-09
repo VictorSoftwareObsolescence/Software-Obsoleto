@@ -1,0 +1,597 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% Template de Artigo Adaptado para Trabalho de Diplomação do ICEI %%%%%%%%%%%%%%%%%%%%%%%%
+%% codificação UTF-8 - Abntex - Latex -  							     %%
+%% Autor:    Fábio Leandro Rodrigues Cordeiro  (fabioleandro@pucminas.br)                            %% 
+%% Co-autor: Prof. João Paulo Domingos Silva  e Harison da Silva                                     %%
+%% Revisores normas NBR (Padrão PUC Minas): Helenice Rego Cunha e Prof. Theldo Cruz                  %%
+%% Versão: 1.0     13 de março 2014                                                                  %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{\esp Introdução}
+
+Este trabalho apresenta um estudo sobre Obsolescência de Software em organizações que utilizam Sistemas SAP. A empresa foi fundada em 1972 por cinco ex-funcionários da IBM com o nome SAP – \textit{Systemanalyse und Programmentwicklung} (Análise de Sistemas e Desenvolvimento de Programação em tradução livre do Alemão) com sede em Weinheim, Alemanha. A SAP iniciou suas atividades no ramo de sistemas de processamento real-time, em suas próprias palavras “Software que processa dados quando o cliente solicita, ao invés de passar a noite processando lotes” \cite{sapse}.
+
+Obsolescência é o status dado a um componente que não é mais disponibilizado pelo seu fabricante original. O fabricante descontinua a produção e manutenção por motivos que podem incluir, indisponibilidade de materiais necessários para fabricação, queda na demanda, duplicação de linha de produtos quando organizações se unem, entre outros. 
+A obsolescência de software ocorre quando o desenvolvedor original ou terceiro autorizado para de prover suporte, correções e atualizações regulares, dificultando ou tornando a utilização do software impossível \cite{rajagopala}.
+
+\textbf{Objetivo Geral: }
+O objetivo geral deste trabalho é analisar as implicações da utilização continuada de software SAP desatualizado ou em situação de obsolescência em organizações brasileiras e apresentar o conceito da obsolescência e DMSMS - \textit{Diminishing Manufacturing Sources and Material Shortages} de software e sua gerência.
+
+\textbf{Objetivos específicos: } 
+Executar uma pesquisa com pessoas da área técnica de desenvolvimento SAP para levantar indicadores e fazer um comparativo entre os dados levantados na pesquisa executada em 2018 e em 2022.
+Analisar as implicações no processo de desenvolvimento, manutenção e no dia a dia dos profissionais da área.
+
+\textbf{ Motivação: }
+Trabalhando na área de tecnologia da informação, diariamente temos contato com várias versões de sistemas, muitos deles com anos de defasagem e várias versões mais atualizadas disponíveis, este estudo tem como objetivo executar uma pesquisa visando identificar as implicações da utilização de componentes de software e sistemas SAP obsoletos nos processos das organizações, manutenção e desenvolvimento em geral pela perspectiva dos desenvolvedores.
+
+\textbf{Justificativa: }
+Em 2015 a SAP apresentou uma nova geração de software empresarial desenvolvida em torno de sua base de dados \textit{in-memory}. A plataforma S/4HANA traz uma mudança histórica na arquitetura do sistema, algo que não ocorria desde o lançamento do ERP R/3, em 1992 \cite{computerworld}. A SAP também anunciou que a versão 6.0 do seu ERP, o \textit{ERP Central Component}, seria descontinuada em 2025. As versões 5.0 e R/3 do ERP já foram descontinuadas em 2010 e 2016 respectivamente \cite{sappam}.
+Tendo em vista que os sistemas SAP são utilizados em 33\% das organizações brasileiras e dominando 50\% do segmento das empresas de grande porte \cite{fgv}.
+
+\section{\esp REFERENCIAL TEÓRICO}
+
+Obsolescência é o status dado a um componente que não é mais disponibilizado pelo seu fabricante original. A fabricante descontinua um componente por diversos motivos incluindo indisponibilidade de materiais necessários para fabricação, queda na demanda, duplicação de linha de produtos quando organizações se unem. O problema de obsolescência é mais proeminente na tecnologia de eletrônicos, por que, o tempo de aquisição de um componente é significantemente menor que o ciclo de vida de fabricação e suporte dos produtos que utilizam esse componente. A obsolescência de produtos se estende para muitas outras áreas como material, têxtil, componentes mecânicos, etc. Inclusive, o problema de obsolescência tem aparecido também entorno
+de software, especificações, padrões, processos e até mesmo em habilidades de recursos humanos.
+
+Obsolescência refere-se a materiais, componentes, dispositivos, software, serviços e processos que ficaram inadquiríveis por meio de seus fornecedores originais. Quando um produto fica obsoleto, seus usuários e clientes ficam em uma situação de escassez de suprimentos quando a demanda por partes ou componentes originais não pode ser atendida pelos fornecedores e não existem opções alternativas disponíveis \cite{COG2005}.
+
+\subsection{\esp Obsolescência involuntária}
+
+%\paragraf{\textbf{Obsolescência involuntária:}}
+A obsolescência involuntária pode ser definida pela seguinte situação: nem o cliente, nem o fornecedor, necessariamente desejam que seu produto ou sistema sofra mudanças. Pode-se categorizar em quatro principais categorias: Logística, Funcional, Tecnológica e \textit{Functionality Improvement Dominated Obsolescence} \cite{sandborn2012}. A análise presente neste trabalho considera os tópicos da obsolescência funcional e FIDO.
+
+% \subsubsection{\esp Logística}
+
+%\paragraf{\textbf{Logística:}} Perda da capacidade de se adquirir materiais componentes, mão de obra e até mesmo software necessários para a produção, manutenção ou suporte a um produto.
+%O fornecedor do software não o vende mais como produto novo (\textit{end-of-sale});
+%A indisponibilidade de se renovar ou adquirir novas licenças (\textit{legally unprocurable} - tradução livre, legalmente incomprável);
+%Finalização de suporte pelo fornecedor ou terceiros (\textit{end-of-support});
+
+\textbf{Funcional:} O produto ou subsistema ainda funciona corretamente e ainda pode ser produzido, porém, os requisitos mais específicos do produto mudaram e com isso sua função, performance e confiabilidade ficam obsoletas.
+Software pode entrar em estado de obsolescência quando hardware, novos requisitos ou outras mudanças em um sistema torna a funcionalidade do componente de software obsoleto. O mesmo ocorre quando o hardware não suporta a execução correta de um componente de software que sofreu upgrade, levando-o a obsolescência.
+
+%\paragraf{\textbf{Tecnológica:}} Componentes com tecnologia mais avançada estão disponíveis, embora ainda seja adquirível, os sistemas em que estes componentes deveriam integrar não o suportam mais ou o fornecedor que produz este componente não o suporta mais. Refere-se também como Obsolescência Tecnológica quando, mídias digitais obsoletas, formatos ou degradações acabam por tornar inviável a utilização do software.
+
+\textbf{FIDO:} \textit{Functionality Improvement Dominated Obsolescence} ou Obsolescência por ~aperfeiçoamento de funcionalidade.
+Fornecedores são obrigados a evoluir seu produto para manter sua fatia de mercado, FIDO se difere da Obsolescência Funcional pois FIDO é forçada em ~direção ao  fornecedor, enquanto a Funcional é forçada em direção ao consumidor.
+
+A aplicação dessas definições pode variar dependendo do sistema em que são usados, e principalmente de onde e como esses sistemas são utilizados. Software de prateleira tem seus respectivos \textit{end-of-sale} e \textit{end-of-support} separados por longos períodos de tempo. Para muitos softwares de prateleira mais populares estas datas são publicadas por seus fornecedores. Aplicações conectadas ou utilizadas via internet, normalmente tem sua “data de declaração de obsolescência” relacionada a seu \textit{end-of-support}, por ser a data onde terminam as atualizações de segurança se torna um risco a utilização continuada dessas aplicações. Em sistemas embarcados ou aplicações isoladas, sua data de obsolescência é dada normalmente pela indisponibilidade de licenças para continuar sua utilização (\textit{legally unprocurable}) ou mudanças nos sistemas em que são embarcados (Obsolescência funcional ou tecnológica).
+
+\subsection{\esp Gerência da Obsolescência}
+Para assegurar a sua eficiência, um plano de gerência de obsolescência - PGO - deve ser constantemente aperfeiçoado, o ciclo PDCA (Planejar-Desenvolver-Checar-Agir) desenvolvido pelo Dr. W. Edwards Deming é apropriado para se alcançar isso \cite{sandborn2012}.
+Visando suportar o aperfeiçoamento constante, a organização de gerência de obsolescência deve receber os recursos necessários para suas atividades que estão alinhadas com o negócio dessa organização. O problema de gerência da obsolescência é muitas vezes referido como DMSMS - \textit{Diminishing Manufacturing Sources and Material Shortages} - que em tradução livre significa, Diminuição de fontes de produção e escassez de materiais - e é definido por Sandborn especificamente para a inabilidade de se adquirir os materiais, componentes ou tecnologias necessárias \cite{sandborn2012}.
+
+O PGO para mitigar e evitar os impactos da escassez de todos os tipos de materiais, componentes, dispositivos, software, serviços e processo durante o ciclo de vida de um produto pode ser descrito dessa forma, baseado no ciclo PDCA como exibido na Figura~\ref{fig:figurapdca}.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}PDCA.]{Ciclo PDCA da Obsolescência}
+	\vspace{-0.4cm}
+	\includegraphics[width=0.6\textwidth]{figuras/pdca.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: \cite{sandborn2012} adaptação }	
+	\label{fig:figurapdca}
+\end{figure}
+\vspace{-0.5cm}
+\newpage 
+Gerência de Obsolescência implica em previsão do ciclo de vida e análises para se identificar os impactos durante todo o ciclo de vida do produto. Os custos relacionados com as ações do PGO devem ser estimados, pessoal deve ser treinado e recursos devem ser adquiridos. Um bom PGO deve ser desenvolvido para assegurar a adequada escolha, o \textit{timing} de implementação e o acompanhamento das ações necessárias.
+
+A Figura \ref{fig:figurapgo} ilustra as três categorias de gerência de Obsolescência DMSMS e seus resultados previstas por \citeonline{sandborn2008}.
+
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}PGO.]{Diagrama da abordagem do PGO}
+	\vspace{-0.4cm}
+	\includegraphics[width=0.75\textwidth]{figuras/pgo.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: \cite{sandborn2008} adaptação }	
+	\label{fig:figurapgo}
+\end{figure}
+\vspace{-0.5cm}
+
+Estas categorias de gerência podem ser descritas da seguinte forma: \cite{sandborn2012}
+\begin{itemize} 
+    \item Gerência Reativa: tem seu foco em determinar uma solução imediata e apropriada para lidar com o problema de um componente que está se tornando obsoleto.
+    
+    \item Gerência Proativa: implementada para componentes críticos que corram risco de ficar obsoletos.
+    
+    \item Gerência Estratégica: significa a utilização de dados de DMSMS, dados logísticos, tecnologias de previsão, e tendências de mercado, otimização de ciclo de vida de produto, para antecipar a possibilidade de obsolescência. A abordagem mais comum é o planejamento de renovação, determinando o que deve ser renovado de forma a minimizar os custos no futuro (intercalado com a gerência reativa).
+    
+\end{itemize}
+\subsubsection{\esp Custos, gerência e mitigação}
+
+Existem custos significativos associados a gerência e mitigação de obsolescência de software. As áreas de custo, recursos e tempo devem ser consideradas:
+
+Poucas, ou quase nenhuma das abordagens da gerência de obsolescência de hardware são aplicáveis para software. As abordagens mais comuns são \textit{License Software Downgrade}, onde uma negociação com o fornecedor do software que disponibiliza licença da nova versão do software para que seja utilizada na versão obsoleta e \textit{Source Code Purchase} onde literalmente se compra o código fonte do software e a manutenção fica a cargo de terceiros (\textit{Third-Party Escrown}) ou do próprio novo detentor \cite{sandborn2007}. 
+
+{\textbf{Reimplementação:}} na reimplementação, o software é modificado para que funcione corretamente no novo ambiente, essa abordagem inclui rearquitetura e reteste completo do software, em muitos casos também reintegração, migração de dados, novos treinamentos e revisão de documentação \cite{sandborn2007}.
+
+{\textbf{Requalificação:}} software portado de um ambiente obsoleto para um novo, modificado ou não, deve ser testado novamente e revalidado \cite{sandborn2007}.
+
+{\textbf{\textit{Rehosting}:}} rehospedar significa, modificar software existente para operar corretamente em um novo ambiente de desenvolvimento, também chamado de \textit{technology porting}. É aplicável para software legado que foi criado em linguagem e sistemas que ficaram obsoletos \cite{sandborn2007}.
+
+{\textbf{Gerência de Mídia:} armazenamento e manutenção da mídia em que um software está arquivado é um elemento crítico da obsolescência de software. Existem muitos problemas e custos envolvidos que dependem do tipo de mídia, o método de armazenamento e controle de versões \cite{sandborn2007}. }
+
+{\textbf{\textit{Case resolution}:} os custos da  resolução de casos de DMSMS são aplicáveis tanto para software quanto para hardware, custos esses que incluem o acompanhamento de várias métricas de resolução, controle de versão e gerência de base de dados \cite{sandborn2007}.
+
+É importante observar que essas abordagens podem ser categorizadas como uma ação de gerência reativa.}
+
+\subsubsection{\esp Modelos de previsão e gerência proativa}
+
+\citeonline{herald2012} propõem dois modelos matemáticos para atualização de componentes obsoletos que tem seu foco na otimização dos custos o tempo de vida do sistema:
+
+\textbf{\textit{System Element Life Cycle} (SELCC)}: o modelo SELCC é baseado em curvas típicas de vendas de produtos, que podem ser usadas para prever o tempo de obsolescência de um elemento do sistema \cite{herald2012}.
+
+\textbf{\textit{Obsolescence Revision Sequence} (ORS)}: o modelo de otimização ORS implementa funções SELCC da perspectiva do sistema, definindo o ciclo operacional e o ciclo de vida do sistema, e uma taxa síncrona de upgrades durante o \textit{life-cycle} de um sistema \cite{herald2012}.
+Esses modelos são úteis para situações onde os elementos dos sistemas conseguem trabalhar de forma independente, mudanças otimizadas nos elementos dos sistemas (SEs) podem maximizar a eficiência das operações durante o \textit{life-cycle} desses sistemas \cite{herald2012}.
+
+\citeonline{moca} desenvolvem uma metodologia para determinar o impacto da obsolescência de peças nos custos de manutenção do ciclo de vida para os sistemas eletrônicos. 
+
+\textbf{MOCA - \textit{Mitigation of Obsolescence Cost Analysis}}:  Utilizando um modelo detalhado de análise de custos, a metodologia determina o melhor
+plano de atualização do projeto durante a vida útil de suporte do produto. O plano de atualização de design consiste no número de atividades de atualização de design, seu conteúdo e respectivas datas de calendário que minimizam o custo de manutenção do ciclo de vida do produto.
+
+\section{\esp Trabalhos relacionados}
+A obsolescência de software tem surgido recentemente como uma área de estudo da tecnologia da informação e aparecem estudos que assim como o presente trabalho, discutem, apresentam casos e propõem soluções para o problema do Software Obsoleto.
+
+Em \citeonline{procedia} os autores fazem uma revisão bibliográfica que explora, sintetiza e compila publicações relativas ao tema de obsolescência em sistemas baseados em software de prateleira (\textit{COTS - Commercial off-the-shelf}). \citeonline{procedia} também propõe a necessidade de perspectivas sistemáticas para agilizar os processos de aquisição, ao mesmo tempo em que se concentra nos aspectos críticos que afetam a sustentação e o custo desses sistemas. Embora os sistemas SAP possam ser considerados como COTS, \citeonline{procedia} não trata o SAP de forma específica e visa um levantamento bibliográfico.
+
+O autor em~\citeonline{felix} discute sobre o impacto da obsolescência tecnológica e argumenta sobre a importância do gerenciamento da obsolescência. Através de um estudo de caso de uma instituição financeira, o autor ilustra situações de risco e perdas para empresas que utilizam sistemas Windows obsoletos e correlaciona com o crescimento de ataques de sequestro de dados em 2017 e o crescimento do tempo de paradas não programadas.
+
+Em ~\citeonline{augusto} é feita uma investigação sobre a experiencia do usuário como um fator para a obsolescência de software.O autor de ~\citeonline{augusto} também argumenta que pequenas empresas tem dificuldade em acompanhar as inovações e novas exigências contínuas da tecnologia da informação. Os autores de ~\citeonline{augusto} e  ~\citeonline{thornberg} propõem soluções para lidar com o problema da Obsolescência.  ~\citeonline{augusto} propõe uma ferramenta chamada \textit{FLUX} para suportar as equipes de design de produtos digitais, o nome \textit{FLUX} se deu pela união da palavra fluxo com a sigla UX (\textit{User experience}). Os autores de  ~\citeonline{thornberg} apresentam um modelo matemático de estratégia proativa \textit{opensource} para a gerência da obsolescência.
+Também em ~\citeonline{thornberg} é discutido problema de componentes obsoletos em sistemas eletrônicos. O modelo proposto em ~\citeonline{thornberg} é utilizado de forma prática em um estudo de caso e comparando com estratégias reativas de gerência de obsolescência.
+
+Em ~\citeonline{rajagopala} argumenta-se sobre a obsolescência de software no setor da indústria de defesa. Os autores buscam entender as práticas atuais na identificação de obsolescência de software, tipos de obsolescência de software e os custos resultantes. Os autores em ~\citeonline{rajagopala} apresentam o resultado de uma série de entrevistas e estudo de casos que podem ajudar gerentes de projeto, pesquisadores de obsolescência, gerentes de obsolescência e desenvolvedores de software a identificar os principais problemas e geradores de custos da obsolescência do software. 
+
+\citeonline{iborra} faz reflexões sobre a obsolescência programada de hardware e software, principalmente de sistemas operacionais e dispositivos eletrônicos como Ipods e impressoras. O estudo \citeonline{iborra} se difere bastante do presente trabalho pois tem uma conclusão com opinião crítica em relação a obsolescência programada, enquanto o presente trabalho apresenta uma visão mais analítica.
+
+O trabalho ~\citeonline{thornberg} se difere em seu total do presente trabalho pois foca em propor e experimentar um modelo de gerência, o trabalho atual tem o foco em entender como os usuários e desenvolvedores lidam com a situação onde a gerência é negligenciada.
+
+O estudo de \citeonline{rajagopala} tem grande semelhança com o presente trabalho nos pontos de avaliação das práticas e custos, e pode ser utilizado para avaliar resultados encontrados na pesquisa executada no presente trabalho.
+
+\section{\esp METODOLOGIA DA PESQUISA}
+
+Desenvolver um questionário é uma tarefa muito parecida com projetar um experimento, pois o projeto deve refletir o objetivo, para que o questionário e análise de suas respostas esclareçam a dúvida proposta. Normalmente uma pesquisa visa alcançar um de dois objetivos. Primeiro caso é tentar descrever um fenômeno de interesse ou no segundo caso, avaliar os impactos de alguma intervenção \cite{Kitchenham}.
+
+\citeonline{Kitchenham} apresentam 2 formas para a construção de uma pesquisa: Design Descritivo e Design Experimental. Baseando na mesma publicação, foi optado pelo Design Experimental e uma de suas 5 opções, "Estudos utilizando uma combinação de técnicas".
+
+O processo de design começa pela revisão dos objetivos, examinando a população alvo identificada pelos objetivos, e decidir sobre a melhor forma de obter as informações necessárias para abordar esses objetivos \cite{Kitchenham}.
+
+Utilizando a literatura relacionada à Gerência de Obsolescência de Software, as publicações e documentação de produtos da SAP e seus parceiros, foi desenvolvido um questionário visando responder pontos relacionados à Gerência da Obsolescência de Software ou a sua falta e a percepção dos profissionais envolvidos no desenvolvimento, manutenção e suporte dos sistemas. Os mesmos questionários foram respondidos por profissionais da área em 2018 e 2022.
+\newpage
+A metodologia consiste nos passos básicos apresentados no fluxo da Figura~\ref{fig:figurametod}.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}PGO.]{Fluxo da Metodologia}
+	\vspace{0.2cm}
+	\includegraphics[width=1.0\textwidth]{figuras/fluxo1.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{}	
+	\label{fig:figurametod}
+\end{figure}
+\vspace{-0.5cm}
+
+\subsection{\esp Definição de público alvo }
+
+A população para essa pesquisa deve englobar desenvolvedores SAP, analistas de sistemas, engenheiros de software e analistas de suporte. Assim possibilitando a avaliação das implicações com uma perspectiva técnica. A população é composta por dois grupos:
+
+\textbf{Usuários do \textit{SAP Community} - https://community.sap.com:}
+É a rede social para profissionais SAP, possui blogs, wiki, perguntas \& respostas e auxilia no trabalho de milhares de usuários SAP diariamente, com mais de 3 milhões de usuários registrados.
+
+\textbf{Grupo ABAP Skype:}
+Grupo no aplicativo de mensagens instantâneas Skype, onde profissionais desenvolvedores SAP e tecnologias relacionadas tiram dúvidas, anunciam oportunidades de emprego e fazem pesquisas. 234 usuários ativos atualmente (Anexo A).
+
+Obtivemos na pesquisa executada em 2018 um total de 46 participantes, já na de 2022 obtivemos 21. Devido a possibilidade de contribuições anônimas nos questionários, não identificamos interseção relevante entre os grupos de 2018 e 2022.
+
+\subsection{\esp Técnicas de levantamento de dados }
+
+Foram utilizadas duas técnicas principais de levantamento de dados. Pesquisa por questionário em múltipla escolha e perguntas de texto livre, aplicada para toda a população de forma direcionada, ou seja, seguindo os três princípios para a efetividade no design de pesquisas \cite{Kitchenham}.
+
+\begin{enumerate}
+    \item Resiliência ao viés (\textit{resilient to bias}): Um projeto que não seja indevidamente influenciado por uma determinada facção, aspecto ou opinião. Ou seja, buscar resultados da pesquisa que sejam representativos, reflitam a realidade da situação.
+    \item  Apropriado (\textit{appropriate}): Um design que faça sentido no contexto da população. 
+    Deve ser complexo o suficiente para abordar as questões levantadas pelos objetivos do estudo, e não mais complexo do que precisa ser.
+    \item Rentável (\textit{cost-effective}): Um projeto cuja administração e a análise está dentro dos meios dos recursos alocados à pesquisa. Essa relação custo-eficácia aplica-se à pesquisa participantes também; os resultados da pesquisa devem ser tão úteis para eles que vale a pena o tempo para completar a pesquisa.
+\end{enumerate}
+
+As perguntas de texto livre foram analisadas de forma individual e utilizadas na avaliação de resultados qualitativa.
+
+\subsection{\esp Criação do questionário }
+
+A Tabela~\ref{tab:tabela_p_r} faz a relação entre as perguntas utilizadas no questionário apresentado aos desenvolvedores SAP com o referencial teórico, e serve como base para a análise qualitativa sobre a forma com que as organizações lidam com a obsolescência de software SAP na perspectiva dos desenvolvedores. A coluna Referencial da Tabela~\ref{tab:tabela_p_r} assume valores que relaciona diretamente o conteúdo da literatura ou a importância da pergunta para a análise dos resultados.
+
+\textbf{Estatística}: Indica que a pergunta está relacionada com levantamento estatístico, e não se relaciona com um tema especifico do referencial teórico.
+
+\textbf{Obsolescência Funcional} e \textbf{FIDO}: As perguntas relacionadas fazem relação direta com os temas discutidos no trabalho  \citeonline{sandborn2012} e as perguntas visam identificar se as versões apresentam características de obsolescência relacionadas a essas categorias de obsolescência involuntária.
+
+\textbf{Gerência e Mitigação}: As perguntas relacionadas com Gerência e Mitigação têm o intuito de identificar quais as técnicas de mitigação dos impactos da obsolescência de software estão sendo utilizadas.
+
+\textbf{Análise qualitativa}: As respostas com esse referencial, tratam das questões abertas de opinião.
+
+% Tabela
+\begin{table}[htb]
+    \footnotesize
+	\centering
+	\caption{\hspace{0.1cm} Perguntas x Referencial teórico.}
+	\vspace{-0.3cm} % espaço entre titulo e tabela
+	\label{tab:tabela_p_r}
+	% Conteúdo da tabela
+	\begin{tabular}{|l|l|c|}
+		\hline
+		\textbf{Num} & \textbf{Pergunta}	& \textbf{Referencial} \\
+		\hline
+	    1 & 
+	   {Antes de responder esta pesquisa já tinha ouvido falar}	&
+	    Estatística  \\
+	     & 
+	   de "Gerência de Obsolescência de Software"?	&
+	      \\
+	      \hline
+	      2 & 
+	   {É um assunto discutido na organização que você trabalha?}	&
+	    Estatística  \\
+	      \hline
+	      	      3 & 
+	   {Tem contato diariamente com software em versões consideradas ultrapassadas?}	&
+	    Estatística  \\
+	      \hline
+	   	      	      4 & 
+	   {Quais versões do ERP você tem mais contato na rotina de trabalho?}	&
+	    Estatística  \\
+	      \hline
+        5 & 
+	   {Você percebe alguma incidência de problemas relacionados com }	&
+	    Obsolescência Funcional  \\
+	     & 
+	    \textit{Software Aging}, na utilização dos sistemas?	&
+	      \\
+	      \hline
+	      6 & 
+	   {\textit{Aging-Related Bugs} são observados:}	&
+	    Obsolescência Funcional  \\
+	      \hline
+	      	      7 & 
+	   {Problemas durante processos de desenvolvimento ou manutenção:}	&
+	    Obsolescência Funcional  \\
+	      \hline
+	     	      	      7 & 
+	   {Problemas com técnicas, comandos e recursos indisponíveis:}	&
+	    Obsolescência FIDO  \\
+	      \hline 
+	       8 & 
+	   {Ainda recebem suporte e atualizações por parte de seu fornecedor original?}	&
+	    Gerência e Mitigação \\
+	      \hline 
+	   	       9 & 
+	   {Caso não, como funciona quando é necessário uma?}	&
+	    Gerência e Mitigação  \\
+	      \hline 
+	      10 & 
+	   {Na sua opinião, levaria clientes/empresas a continuarem utilizando}	&
+	    Análise Qualitativa  \\
+	     & 
+	   versões desatualizadas do ERP?	&
+	      \\
+	      \hline
+	      11 & 
+	   {Caso você tenha alguma experiencia relacionada ao assunto, pode descreve-la }	&
+	     Análise Qualitativa  \\
+	     & 
+	   aqui, todas as informações aqui inseridas são confidencias...	&
+	      \\
+	      \hline
+	\end{tabular}
+	\vspace{.1cm}  %espaço entre tabela e fonte
+	\small
+	% Fonte
+	{\footnotesize\\ \textbf{Fonte: Formulário de pesquisa Anexo B}}
+\end{table}
+\section{\esp Obsolescência de software em sistemas SAP }
+
+Em uma breve pesquisa exploratória utilizando a base de clientes da Engineering do Brasil, foi possível identificar estatísticas iniciais. Foram avaliados inicialmente os sistemas ECC e SRM dos clientes.
+O SAP ECC, acrônimo de \textit{ERP Central Component}, é o sistema de planejamento de recursos empresariais que suporta todos os principais processos de negócios, funções e serviços corporativos mais comuns que as empresas necessitam  \cite{BOEDER2014}.
+
+SAP SRM acrônimo de Supplier Relationship Manager que cuida da integração fornecedor/empresa facilitando processos de compras, administração de contratos, e aborda de forma compreensiva a gerência do fluxo de informação entre empresas e seus respectivos fornecedores \cite{BOEDER2014}.
+
+Analisando a base de clientes em 2018, foi possível identificar que 75\% utilizam sistemas SAP entre 3 anos até 7 de defasagem, ou seja, sistemas que não receberam atualizações fornecidas diretamente pela SAP. Muitos destes sistemas já possuem 10 novas versões lançadas.
+
+A Tabela~\ref{tab:versoes_sap} demonstra os dados relacionados às versões e data de lançamento das versões do componente APPL, relacionado aos módulos de logística e contabilidade do ECC e APPL do SRM, relacionados aos componentes gerência de compra de materiais e serviços, contratos e leilões. Os nomes das empresas foram ocultados por questões de confidencialidade.
+
+% Tabela
+\begin{table}[htb]
+    \footnotesize
+	\centering
+	\caption{\hspace{0.1cm} Empresas e versões de software SAP.}
+	\vspace{-0.3cm} % espaço entre titulo e tabela
+	% Conteúdo da tabela
+	\begin{tabular}{l|c|c|c|c|r}
+		\hline
+		\textbf{Empresa}	& \textbf{Segmento de Mercado} & \textbf{Software}	& \textbf{Versão}	& \textbf{Versão}& \textbf{Defasagem}
+		\\
+		\textbf	& \textbf& \textbf	& \textbf{utilizada}	& \textbf{em 2018}& \textbf{em anos} 
+		\\
+		\hline
+		1	& Vacinas e Diagnósticos        & ECC 6.0	& 600.26	& 600.29 & 3\\
+		2	& Construtora e Engenharia      & ECC 6.0	& 604.08	& 604.19 & 7\\
+		3	& Construtora e Engenharia      & ECC 6.0	& 604.09	& 604.19 & 6\\
+		4	& Vacinas e Diagnósticos        & ECC 6.0	& 604.18	& 604.19 & 1\\
+		5	& Águas e Saneamento            & ECC 6.0	& 604.19	& 604.19 & 1\\
+		6	& Construtora e Engenharia      & ECC 6.0	& 605.06	& 605.16 & 6\\
+		7	& Instituição de Ensino         & ECC 6.0	& 605.06	& 605.16 & 6\\
+		8	& Construtora e Engenharia      & ECC 6.0	& 605.06	& 605.16 & 6\\
+		9	& Construtora e Engenharia      & SRM 7.0	& 701.07	& 701.16 & 4\\
+		10	& Peças automotivas             & ECC 6.0	& 617.02	& 617.16 & 5\\
+		11	& Indústria de Vidro            & ECC 6.0	& 617.02	& 617.16 & 5\\
+		12	& Biotecnologia                 & ECC 6.0	& 617.05	& 617.16 & 4\\
+		\hline
+	\end{tabular}
+	\vspace{.1cm}  %espaço entre tabela e fonte
+	\small
+	% Fonte
+	{\footnotesize \textbf{\\Fonte: Dados de APPL e data de ~\cite{sappam}}}
+	\label{tab:versoes_sap}
+\end{table}
+
+%
+%\begin{table}[htb]
+%    \footnotesize
+%	\centering
+%	\caption{\hspace{0.1cm} Empresas e versões de software SAP.}
+%	\vspace{-0.3cm} % espaço entre titulo e tabela
+%	% Conteúdo da tabela
+%	\begin{tabular}{l|c|c|c|c|c|c}
+%		\hline
+%		\textbf{Empresa}	& \textbf{Segmento de Mercado} & \textbf{Software}	& \textbf{Versão}	& \textbf{Data}& \textbf{APPL. Atual} & \textbf{Data}
+%		\\
+%		\hline
+%		1	& Vacinas e Diagnósticos        & ECC 6.0	& 600.26	& 08.09.2014	& 600.29 & 09.05.2017\\
+%		2	& Construtora e Engenharia      & ECC 6.0	& 604.08	& 21.10.2010	& 604.19 & 30.05.2017\\
+%		3	& Construtora e Engenharia      & ECC 6.0	& 604.09	& 01.04.2011	& 604.19 & 30.05.2017\\
+%		4	& Vacinas e Diagnósticos        & ECC 6.0	& 604.18	& 08.06.2016	& 604.19 & 30.05.2017\\
+%		5	& Águas e Saneamento            & ECC 6.0	& 604.19	& 30.05.2017	& 604.19 & 30.05.2017\\
+%		6	& Construtora e Engenharia      & ECC 6.0	& 605.06	& 20.10.2011	& 605.16 & 30.05.2017\\
+%		7	& Instituição de Ensino         & ECC 6.0	& 605.06	& 20.10.2011	& 605.16 & 30.05.2017\\
+%		8	& Construtora e Engenharia      & ECC 6.0	& 605.06	& 20.10.2011	& 605.16 & 30.05.2017\\
+%		9	& Construtora e Engenharia      & SRM 7.0	& 701.07	& 10.02.2012	& 701.16 & 01.06.2017\\
+%		10	& Peças automotivas             & ECC 6.0	& 617.02	& 16.11.2013	& 617.16 & 20.03.2018\\
+%		11	& Indústria de Vidro            & ECC 6.0	& 617.02	& 16.11.2013	& 617.16 & 20.03.2018\\
+%		12	& Biotecnologia                 & ECC 6.0	& 617.05	& 30.04.2014	& 617.16 & 20.03.2018\\
+%
+%		\hline
+%	\end{tabular}
+%	\vspace{.1cm}  %espaço entre tabela e fonte
+%	\small
+%	% Fonte
+%	{\footnotesize \textbf{Fonte: Dados de APPL e data de SAP PAM, 2017-2018~\cite{sappam}}}
+%	\label{tab:versoes_sap}
+%\end{table}
+
+Para se interpretar as informações levantadas é preciso conhecer alguns termos utilizados na documentação fornecida pela SAP e os componentes de software envolvidos.
+
+\subsection{\esp{\textit{Enhancement packages}}}
+
+O SAP ERP foi disponibilizado em 2006 e desde então, funcionalidades adicionais são entregues via pacotes de melhorias, chamados de \textit{SAP Enhancement Packages} (EhP). Esses pacotes permitem que os clientes da SAP possam gerenciar e disponibilizar novas funcionalidades de software \cite{SAPERPEHP}.
+Para a versão 6.0 do ECC, existem até o momento 7 versões de \textit{Enhancement Packages}, e cada pacote possui seus respectivos \textit{Support Packages}.
+
+% Tabela
+\begin{table}[htb]
+	\centering
+	\caption{\hspace{0.1cm} \textit{Enhancement Packages }}
+	\vspace{-0.3cm} % espaço entre titulo e tabela
+	\label{tab:tabela1}
+	% Conteúdo da tabela
+	\begin{tabular}{l|c}
+		\hline
+		\textbf{Versão EHP}	& \textbf{Descrição} \\
+		\hline
+		600	& Versão do ECC de 2006                               \\
+		601	& Primeiro EhP lançado no fim do ano de 2006          \\
+		602	& EhP2 publicado em 11 de 2007                        \\
+		603	& EhP3 publicado em 5 de 2008                         \\
+		604	& EhP4 publicado em 5 de 2009                         \\
+		605	& EhP5 publicado em 2010                              \\
+		606	& EhP6 publicado em 11 de 2011                        \\
+		617	& EhP7 publicado em 2013                              \\
+		618	& EhP 8, versão atual lançada em 2016                 \\
+		\hline
+	\end{tabular}
+	\vspace{.1cm}  %espaço entre tabela e fonte
+	\small
+	% Fonte
+	{\footnotesize\\ \textbf{Fonte: Dados de \cite{sappam}}}
+\end{table}
+
+Cada um desses pacotes possui correções, melhorias e adequações.
+
+EhP1 - Atualizações e novas funcionalidades no controle de usuários e administração de perfis, nos processos de recursos humanos, finanças, \textit{compliance}, compras, serviços, etc.
+
+EhP2 - Ajustes e novas funcionalidades foram incluídas nas áreas financeira, Vendas e Serviços, RH, Serviços corporativos, Desenvolvimento e Manutenção de produtos e Logística Executiva.
+
+EhP3 - Incluído o CPE (\textit{Commodity Pricing Engine}) nos módulos SD (\textit{Sales and Distribution}) e MM (\textit{Material Management}).
+
+EhP4 - Inovações no módulo HCM (RH), Finanças, Gerência de Ativos Empresariais, Seguros e Localização para países.
+
+EhP5 - Este pacote introduziu melhorias nas áreas de Vendas, Centrais de Serviços Compartilhados, Compras e Logística Executiva, Gestão de Qualidade (QM), EH\&S ( módulo de Sustentabilidade, Meio-Ambiente, Saúde e Segurança), HCM (RH), Finanças, Gerência de Ativos Empresariais.
+
+EhP6 - Tecnologia HANA e Fiori são adicionadas neste pacote,  junto com 694 funcionalidades. 177 são classificadas como melhorias e novas funcionalidades e o restante melhorias de funcionalidades existentes do pacote anterior.
+
+EhP7 - Introduziu uma maior adoção do HANA e Fiori para aplicativos, alterando a experiência do usuário se concentrando na simplificação da UX no SAP mobile. EhP7 atua como base para as futuras inovações do SAP Business Suite (UI, SAP HANA) a serem disponibilizadas trimestralmente. Também contém mais três recursos, incluindo uma coleção de aplicativos Fiori, MRP (Planejamento de requisitos de materiais) rodados em HANA e tecnologias para implementação de conceitos de \textit{Data Aging}.
+
+EhP8 - Oferece inovações e serve de base para a transição para o S/4HANA. O SAP ECC 6.0 será descontinuado em 2025 e o S/4HANA é o novo carro-chefe da SAP no segmento de ERPs. O EhP8 incluiu novas funcionalidades executadas através de diferentes indústrias, \textit{Line of Bussiness} e HANA. Além disso, as versões dos componentes válidos para várias aplicações (\textit{cross-application components})  se fundem para simplificar a estrutura.
+
+\section{\esp RESULTADOS}
+
+Os resultados deste trabalho foram avaliados em duas etapas: análise de resultados quantitativa e qualitativa.
+
+A análise quantitativa trata dos números encontrados nas questões de múltipla escolha e faz uma comparação das situações encontradas nos anos de 2018 e 2022. A análise qualitativa avalia e argumenta sobre as respostas de texto livre do questionário utilizando os conceitos apresentados no referencial teórico. As repostas dos questionários estão disponíveis no Anexo C.
+
+\subsection{\esp Análise quantitativa }
+
+Analisando a pesquisa feita com grupo de desenvolvedores SAP em 2018 e 2022 foi possível encontrar indicadores:
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Conhecimento prévio do tema}
+	\vspace{-0.4cm}
+	\includegraphics[width=0.73\textwidth]{figuras/comp/conhecimento-previo.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo C }
+	\label{fig:conhec}
+\end{figure}
+
+Quando questionados sobre o conhecimento do termo “Gerência de Obsolescência de Software“ em 2018 apenas 23,9\% dos entrevistados possuíam conhecimento anterior sobre o tema. Em comparação com 2022, 38,1\% dos respondentes já haviam conhecimento prévio do tema.
+Como mostra a Figura ~\ref{fig:conhec}, houve um crescimento no conhecimento prévio sobre o assunto, porém ainda é relativamente novo e pouco discutido, como evidencia a Figura~\ref{fig:discu}.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Discussão do tema em empresas que utilizam SAP }
+	\vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/comp/assunto-discutido.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo C }
+	\label{fig:discu}
+\end{figure}
+Como pode ser observado também  no comparativo de 2018 e 2022 presente na Figura~\ref{fig:discu} 95,7\% das respostas afirmam que a Gerência de Obsolescência de Software não é um tema discutido no ambiente das empresas em que os entrevistados trabalham. Em 2022 essa afirmação caiu para 76,2\%.
+
+Em 2018, se tratando de contato com versões desatualizadas ou obsoletas, 78,3\% dos desenvolvedores confirmam que tem contato com sistemas SAP Obsoletos ou com versões desatualizadas durante a rotina de trabalho, enquanto 17,4\% informam que não.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Contato com software desatualizado ou obsoleto}
+	\vspace{-0.4cm}
+	\includegraphics[width=0.8\textwidth]{figuras/comp/contato-com-software-obsoleto.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo C }	
+	\label{fig:figura4}
+\end{figure}
+
+Esse dado cresce em 2022, passando para 85,7\% das respostas, o que pode indicar que, softwares que não eram considerados obsoletos ou desatualizados em 2018, agora já podem estar nesta situação. Também é possível argumentar que a Gerência Proativa de obsolescência de software proposta por~\citeonline{sandborn2012} não é aplicada nas empresas brasileiras.
+\newpage
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Versões do ERP}
+	\vspace{-0.4cm}
+	\includegraphics[width=1.0\textwidth]{figuras/Versoes.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo C}	
+	\label{fig:pergunta-5}
+\end{figure}
+\vspace{-0.5cm}
+
+Em 2018, apenas 34,8\% das respostas apresentaram contato com as versões mais atualizadas do ERP, 618 ou com o ERP novo lançado em 2015 S/4HANA. É possível verificar que 50\% das respostas incluem a versão 617, o que indica que as empresas estavam no caminho para atualizar seu Sistema ERP para a plataforma S/4HANA, tendo em vista que a versão 618 é o ultimo passo para o upgrade.
+A versão 617 foi lançada no ano de 2013, indicativo de quase 10 anos de defasagem.
+
+Avaliando o cenário em 2022, é possível ver o crescimento da plataforma S/4HANA On-premise e Cloud.
+57\% das respostas incluem o S/4HANA On-premise, isso significa que em 2022 as empresas estão atualizando seus ERPs para as últimas versões, temos ainda também muita ocorrência das versões de migração 617 e 618. 
+Ainda é possível identificar 42\% de ocorrência da versão 605, lançada em 2010.
+\newpage
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Erros encontrados}
+	\vspace{-0.4cm}
+	\includegraphics[width=1.0\textwidth]{figuras/Erros.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo B }	
+	\label{fig:pergunta-erro}
+\end{figure}
+
+A incompatibilidade de soluções já existentes nas versões mais novas com as versões obsoletas ou mais antigas é a maior ocorrência, referenciada no gráfico da Figura~\ref{fig:pergunta-erro} nestes casos a técnica de mitigação deve ser reimplementar as atualizações (Reimplementação) \cite{sandborn2007}.
+
+A dificuldade de reaproveitamento de código também é apontada como um problema recorrente, seguido com a obrigatoriedade de utilização de código fonte já em desuso (\textit{deprecated}) ou código fonte com padrões tão antigos que dificultam a compreensão e problemas de performance nos ambientes de desenvolvimento. O cenário não teve mudanças muito significativas entre os questionários de 2018 e 2022.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{Qual é o procedimento adotado para mitigação da obsolescência}
+	\vspace{-0.4cm}
+	\includegraphics[width=1.0\textwidth]{figuras/Mitigacao.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize Fonte: Respostas do questionário Anexo B }	
+	\label{fig:org_lid}
+\end{figure}
+
+\vspace{-0.5cm}
+Para os casos de sistemas sem suporte, como os primeiros \textit{enhancement packages} 600 até 605, quando não existe opção de atualização pelas ferramentas da própria SAP, em 2018 68,4\% das respostas indicam que a solução deve ser desenvolvida de forma independente, quase 37\% acabam por terceirizar o suporte ao sistema (\textit{Third party escrow}.) 31,6\% dos casos indicam uma resolução utilizando softwares auxiliares e \textit{middlewares}.
+Houve um crescimento de 8,5\% no desenvolvimento independentes de soluções em 2022 e a ocorrência da utilização de \textit{middleware} diminuiu 16 pontos percentuais.
+
+\subsection{\esp Análise qualitativa }
+
+No presente trabalho, após a apresentação do formulário, foram disponibilizadas duas áreas de texto livre, os desenvolvedores poderiam opinar e contar alguma experiencia envolvendo o assunto.
+
+A primeira pergunta de texto livre, questionou o ponto de vista dos desenvolvedores sobre o que motiva empresas a continuar utilizando versões obsoletas ou muito desatualizadas de produtos da SAP.
+
+\begin{figure}[ht]
+	\centering	
+	\caption[\hspace{0.1cm}Q1.]{\textit{Word Cloud}}
+	\vspace{-0.4cm}
+	\includegraphics[width=1.0\textwidth]{figuras/wordcloud-v1.png}
+	% Caption centralizada
+	% 	\captionsetup{justification=centering}
+	% Caption e fonte 
+	\vspace{-0.2cm}
+	\\\textbf{\footnotesize \textit{Word Cloud } gerado com as respostas de texto livre }	
+	\label{fig:wordcloud}
+\end{figure}
+\vspace{-0.5cm}
+
+O \textit{word cloud} apresentado na Figura~\ref{fig:wordcloud} foi criado utilizando o texto das respostas sobre a opinião dos desenvolvedores quando questionados sobre a motivação da utilização de sistemas obsoletos em 2022. 
+
+A gestão de TI conservadora e a falta de recursos para investimentos em grandes mudanças foram considerados os principais motivos da utilização continuada de sistemas em situação de obsolescência. A quantidade de customizações nos ambientes SAP também são apontamos como um dos motivos para a dificuldade de atualização dos sistemas (Anexo C).
+
+A filosofia \textit{Clean Core} lançada pela IBM e incentivada pela SAP para novas instâncias do S/4 HANA, é uma parceira para reduzir o impacto de customizações no processo de atualização dos sistemas. A customização dos ERPs  pode diminuir o ritmo das mudanças e resultar em ciclos mais lentos e mais caros. Criando desafios na consistência dos dados, testes de regressão adicionais e a incompatibilidade de processos \cite{cleancore}.
+
+\citeonline{cleancore} argumenta que com abordagens \textit{Clean Core} é possível enfrentar em novas perspectivas os desafios de modernização de código, processo e dados. Com essa abordagem é possível simplificar, agilizar e diminuir o custo da mudança para o SAP S/4HANA.
+
+Analisando as respostas também foi possível interpretar que, embora nas plataformas SAP a reutilização de código pode ser simplificada, levando em conta que todos os ambientes SAP ERP utilizam a linguagem de programação ABAP \cite{abapcontext}, diferenças de versões podem gerar uma alta carga de trabalho de adaptação (Anexo C).
+
+Uma das respostas cita um caso de uma empresa brasileira que foi comprada por uma empresa europeia.
+A organização precisou replicar soluções utilizadas em seu sistema SAP localizado na Europa para o sistema SAP localizado no Brasil. Devido ao estado de obsolescência da versão Brasileira, houve um grande consumo de tempo de trabalho para converter os comandos utilizados no SAP europeu, com versão atualizada, para a versão defasada da instalação SAP brasileira. Ainda segundo a resposta, "Um trabalho que deveria demorar apenas horas, as vezes pode gastar dias"  (Anexo C). 
+Neste caso, a técnica de mitigação da obsolescência de software utilizada é a reimplementação \cite{sandborn2007}
+
+O estado de obsolescência de sistemas impacta até organizações terceiras, uma resposta comenta que uma empresa que desenvolve software COTS específicos para a plataforma SAP precisa manter várias versões do mesmo produto. Essas varias versões existem para poderem ser utilizadas nas versões mais antigas dos sistemas SAP (Anexo C). O \textit{rehosting} também é uma técnica de mitigação utilizada na gerência da obsolescência descrita por \citeonline{sandborn2007}.
+
+\section{\esp Considerações Finais}
+No presente trabalho mostramos como a utilização de software em situação de obsolescência pode impactar negativamente no dia a dia de desenvolvedores e analistas de suporte, também possíveis  implicações na qualidade, custos e agilidade de entregas de melhorias ou adequações. Discutimos os temas da obsolescência de software, partindo da visão de teóricos da área e avaliando o cenário  das empresas que utilizam produtos SAP no Brasil.
+
+É possível concluir que a Gerência da Obsolescência de Software ainda é um tema pouco discutido nas organizações brasileiras. Porém esta situação está mudando, esse trabalho mostra que houve um crescimento de quase 10\% no conhecimento sobre o assunto Gerência da Obsolescência, também houve um aumento de aproximadamente 8\% na percepção dos desenvolvedores em relação a obsolescência.
+
+Argumentamos que este aumento (de 2018 para 2022) na percepção de estar utilizando sistemas em estado de obsolescência está relacionada a duas possibilidades: a percepção aumentou, pois, sistemas que em 2018 não estavam em situação de obsolescência, ficam esses anos sem receber atualizações e agora estão em situação de obsolescência ou o crescimento do conhecimento sobre o tema da obsolescência de software, mudou a percepção dos desenvolvedores.
+
+Como é dito em \citeonline{sandborn2007}, a obsolescência não é evitável de forma prática. Os custos com a mitigação reativa também não são evitáveis, a mitigação por meio de reimplementação gera custos adicionais por adaptar e refatorar soluções já existentes. A mitigação por meio de \textit{third-party escrow} também gera custos altos, a experiencia dos autores de \citeonline{spaceops} conclui que entregar condigo fonte para uma equipe terceirizada prover suporte e evoluções, pode gerar custos com reimplementações tão significativos quanto os custos originais de desenvolvimento. A utilização de \textit{middlewares} também pode significar a necessidade de aquisição de novas licenças de software, que em sua grande maioria, geram custos. É importante adicionar que sustentar a infraestrutura para a utilização de sistemas obsoletos, pode aumentar em 40\%o custo de manutenção das aplicações e em 148\% nos custos de sustentação e administração de servidores \cite{idc2016}.
+
+Baseado nas respostas dos questionários deste trabalho, é possível identificar um crescimento na utilização da plataforma S/4HANA Cloud, uma plataforma baseada em computação em nuvem, retirando a responsabilidade de sustentação de infraestrutura e atualizações do escopo da organização que o utiliza.
+
+Uma abordagem proativa como a apresentada no modelo MOCA tool (\textit{Mitigation of
+Obsolescence Cost Analysis)} \cite{moca} desenvolvido na universidade de Maryland/USA, apresenta muitos ganhos no planejamento no ciclo de vida de componentes eletrônicos que abordagens reativas nunca irão conseguir fornecer \cite{dmsmscenter2004}. Uma abordagem baseada neste modelo pode prover melhor alocação de orçamento no início das fases de desenvolvimento, diretivas mais precisas de como os sistemas devem ser modificados ou atualizados, melhorar a disponibilidade operacional, também permite uma avaliação mais ampla de impactos quando abordagens de mitigação são escolhidas e deixa claro oportunidades de utilização compartilhada de soluções em vários sistemas e aplicações.
+
+O presente trabalho buscou jogar luz sobre o tema da Obsolescência de Software e sua gerência, identificar a situação do software obsolete no brasil por meio da perspectiva dos profissionais da área e divulgar modelos já existentes para a gerência da obsolescência de forma proativa e propor a sua utilização. 
+
+
+
+
